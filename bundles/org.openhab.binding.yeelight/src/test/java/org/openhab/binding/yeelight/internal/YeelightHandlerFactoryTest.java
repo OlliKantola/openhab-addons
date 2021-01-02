@@ -53,7 +53,8 @@ public class YeelightHandlerFactoryTest {
                     { "wonder", YeelightColorHandler.class }, { "stripe", YeelightStripeHandler.class },
                     { "ceiling", YeelightCeilingHandler.class }, { "ceiling3", YeelightCeilingHandler.class },
                     { "ceiling1", YeelightCeilingWithNightHandler.class }, { "desklamp", YeelightCeilingHandler.class },
-                    { "ceiling4", YeelightCeilingWithAmbientHandler.class }, { "unknown", null } });
+                    { "ceiling4", YeelightCeilingWithAmbientHandler.class }, 
+                    { "ceiling10", YeelightCeilingWithAmbientHandler.class }, { "unknown", null } });
 
     private final YeelightHandlerFactory factory = new YeelightHandlerFactory();
 

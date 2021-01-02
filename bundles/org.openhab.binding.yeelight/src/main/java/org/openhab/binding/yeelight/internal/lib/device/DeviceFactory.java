@@ -40,6 +40,8 @@ public class DeviceFactory {
                 return new CeilingDeviceWithNightDevice(id);
             case ceiling4:
                 return new CeilingDeviceWithAmbientDevice(id);
+            case ceiling10:
+                return new CeilingDeviceWithAmbientv10Device(id);
             case color:
                 return new WonderDevice(id);
             case mono:

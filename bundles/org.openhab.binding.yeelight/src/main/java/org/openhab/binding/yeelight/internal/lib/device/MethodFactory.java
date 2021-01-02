@@ -177,6 +177,9 @@ public class MethodFactory {
             case ceiling4:
                 return new DeviceMethod(MethodAction.PROP, new Object[] { "power", "name", "bright", "ct", "bg_power",
                         "bg_bright", "bg_hue", "bg_sat", "active_mode" });
+            case ceiling10:
+                return new DeviceMethod(MethodAction.PROP, new Object[] { "power", "name", "bright", "ct", "bg_power",
+                        "bg_bright", "bg_hue", "bg_sat", "active_mode" });
             default:
                 return null;
         }

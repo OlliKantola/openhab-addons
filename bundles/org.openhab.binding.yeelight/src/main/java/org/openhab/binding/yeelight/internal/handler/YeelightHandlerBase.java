@@ -80,6 +80,8 @@ public abstract class YeelightHandlerBase extends BaseThingHandler
             return DeviceType.ceiling3;
         } else if (typeUID.equals(THING_TYPE_CEILING4)) {
             return DeviceType.ceiling4;
+        } else if (typeUID.equals(THING_TYPE_CEILING10)) {
+            return DeviceType.ceiling10;
         } else if (typeUID.equals(THING_TYPE_WONDER)) {
             return DeviceType.color;
         } else if (typeUID.equals(THING_TYPE_DOLPHIN)) {
