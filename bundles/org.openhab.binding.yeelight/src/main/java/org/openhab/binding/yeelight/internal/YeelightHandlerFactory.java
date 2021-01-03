@@ -17,7 +17,12 @@ import static org.openhab.binding.yeelight.internal.YeelightBindingConstants.*;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.openhab.binding.yeelight.internal.handler.*;
+import org.openhab.binding.yeelight.internal.handler.YeelightCeilingHandler;
+import org.openhab.binding.yeelight.internal.handler.YeelightCeilingWithAmbientHandler;
+import org.openhab.binding.yeelight.internal.handler.YeelightCeilingWithNightHandler;
+import org.openhab.binding.yeelight.internal.handler.YeelightColorHandler;
+import org.openhab.binding.yeelight.internal.handler.YeelightStripeHandler;
+import org.openhab.binding.yeelight.internal.handler.YeelightWhiteHandler;
 import org.openhab.core.thing.Thing;
 import org.openhab.core.thing.ThingTypeUID;
 import org.openhab.core.thing.binding.BaseThingHandlerFactory;
@@ -40,6 +45,7 @@ public class YeelightHandlerFactory extends BaseThingHandlerFactory {
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_CEILING1);
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_CEILING3);
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_CEILING4);
+        SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_CEILING10);
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_DOLPHIN);
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_CTBULB);
         SUPPORTED_THING_TYPES_UIDS.add(THING_TYPE_WONDER);
@@ -67,7 +73,7 @@ public class YeelightHandlerFactory extends BaseThingHandlerFactory {
             return new YeelightCeilingHandler(thing);
         } else if (thingTypeUID.equals(THING_TYPE_CEILING1)) {
             return new YeelightCeilingWithNightHandler(thing);
-        } else if (thingTypeUID.equals(THING_TYPE_CEILING4)) {
+        } else if (thingTypeUID.equals(THING_TYPE_CEILING4) || thingTypeUID.equals(THING_TYPE_CEILING10)) {
             return new YeelightCeilingWithAmbientHandler(thing);
         } else {
             return null;
