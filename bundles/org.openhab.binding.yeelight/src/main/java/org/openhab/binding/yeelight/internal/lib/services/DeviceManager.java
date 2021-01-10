@@ -339,7 +339,7 @@ public class DeviceManager {
             case ceiling4:
                 return "Yeelight LED Ceiling with ambient light";
             case ceiling10:
-                return "Yeelight LED Ceiling with ambient light";
+                return "Yeelight LED Ceiling v10 with ambient light";
             case color:
                 return "Yeelight Color LED Bulb";
             case mono:
